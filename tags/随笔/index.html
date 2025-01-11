@@ -14,23 +14,26 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":18,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":18,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="初初见你">
 <meta property="og:type" content="website">
 <meta property="og:title" content="空想家">
-<meta property="og:url" content="http://example.com/categories/%E6%B5%8B%E8%AF%95/index.html">
+<meta property="og:url" content="http://example.com/tags/%E9%9A%8F%E7%AC%94/index.html">
 <meta property="og:site_name" content="空想家">
 <meta property="og:description" content="初初见你">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Liu">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/categories/%E6%B5%8B%E8%AF%95/">
+<link rel="canonical" href="http://example.com/tags/%E9%9A%8F%E7%AC%94/">
 
 
 <script id="page-configurations">
@@ -43,7 +46,7 @@
   };
 </script>
 
-  <title>分类: 测试 | 空想家</title>
+  <title>标签: 随笔 | 空想家</title>
   
 
 
@@ -101,6 +104,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -125,21 +129,43 @@
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">1</span></a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">1</span></a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -156,7 +182,7 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content tag">
             
 
   
@@ -165,8 +191,8 @@
   <div class="post-block">
     <div class="posts-collapse">
       <div class="collection-title">
-        <h2 class="collection-header">测试
-          <small>分类</small>
+        <h2 class="collection-header">随笔
+          <small>标签</small>
         </h2>
       </div>
 
@@ -180,15 +206,15 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2025-01-08T22:37:35+08:00"
-              content="2025-01-08">
-          01-08
+              datetime="2025-01-11T19:45:31+08:00"
+              content="2025-01-11">
+          01-11
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2025/01/08/1st/" itemprop="url">
-            <span itemprop="name">1st</span>
+          <a class="post-title-link" href="/2025/01/11/%E6%88%91%E6%93%85%E9%95%BF%E6%84%9F%E5%8F%97-%E5%8D%B4%E6%8B%99%E4%BA%8E%E5%BC%80%E5%8F%A3/" itemprop="url">
+            <span itemprop="name">我擅长感受 却拙于开口</span>
           </a>
       </div>
 
@@ -272,12 +298,6 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
@@ -321,6 +341,16 @@
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Liu</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">1k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1 分钟</span>
 </div>
 
         
@@ -338,6 +368,8 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -357,6 +389,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
